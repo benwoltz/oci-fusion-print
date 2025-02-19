@@ -1,4 +1,7 @@
-variable "tenancy_ocid" {}
+variable "tenancy_ocid" {
+  description = "OCID of the tenancy where to create all resources"
+  type        = string
+}
 
 variable "user_ocid" {}
 
@@ -48,21 +51,6 @@ variable "vcn_dns_label" {
     condition     = var.vcn_dns_label == null ? true : length(regexall("^[^0-9][a-zA-Z0-9_]{1,14}$", var.vcn_dns_label)) > 0
     error_message = "DNS label must be unset to disable, or an alphanumeric string with length of 1 through 15 that begins with a letter."
   }
-}
-
-variable "freeform_tags" {
-  description = "simple key-value pairs to tag the created resources using freeform OCI Free-form tags."
-  type        = map(any)
-  default = {
-    terraformed = "Please do not edit manually"
-    module      = "oracle-terraform-modules/vcn/oci"
-  }
-}
-
-variable "defined_tags" {
-  description = "predefined and scoped to a namespace to tag the resources created using defined tags."
-  type        = map(string)
-  default     = null
 }
 
 variable "subnet_cidr_block" {
@@ -126,7 +114,7 @@ variable "on_prem_printer_ip" {
 }
 
 variable "on_prem_printer_network" {
-  description = "Network of on-prem printer or print server"
+  description = "Network of on-prem printer or print server including mask e.g. 10.0.0.0/24"
   type        = string
 }
 
@@ -134,12 +122,6 @@ variable "load_balancer_display_name" {
   description = "user-friendly name of the flexible load balancer"
   type        = any
   default     = "Flexible Load Balancer"
-}
-
-variable "load_balancer_ip_mode" {
-  description = "IPv4 or IPv6"
-  type        = string
-  default     = "IPV4"
 }
 
 variable "load_balancer_shape_details_maximum_bandwidth_in_mbps" {
