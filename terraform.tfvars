@@ -6,18 +6,18 @@
 # ----- The below variables do NOT have a default value in variables.tf.  They MUST be provided appropriate values.
 # ------------------------------------------------------
 
-tenancy_ocid = "ocid1.tenancy.oc1..aaaa"
-region = "us-ashburn-1"
-compartment_ocid = "ocid1.compartment.oc1..aaaa"
-user_ocid = "ocid1.user.oc1..aaaa"
-fingerprint          = "a1:c2:"
-private_key_path = "/Users/username/Documents/privatekeypath/privatekey.pem"
+# tenancy_ocid = "ocid1.tenancy.oc1..aaaa"
+# region = "us-ashburn-1"
+# compartment_ocid = "ocid1.compartment.oc1..aaaa"
+# user_ocid = "ocid1.user.oc1..aaaa"
+# fingerprint          = "a1:c2:"
+# private_key_path = "/Users/username/Documents/privatekeypath/privatekey.pem"
 
-vcn_cidrs = ["10.0.0.0/16"]
-subnet_cidr_block = "10.0.0.0/24"
-on_prem_printer_ip = "192.168.1.1"
-on_prem_printer_network = "192.168.1.0/24"
-fusion_source_cidr = "147.154.0.0/19"
+# vcn_cidrs = ["10.0.0.0/16"]
+# subnet_cidr_block = "10.0.0.0/24"
+# on_prem_printer_ip = "192.168.1.1"
+# on_prem_printer_network = "192.168.1.0/24"
+# fusion_source_cidr = "147.154.0.0/19"
 
 # ------------------------------------------------------
 # ----- Optional Variables
