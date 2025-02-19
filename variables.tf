@@ -11,7 +11,7 @@ variable "private_key_path" {}
 
 variable "vcn_cidrs" {
   description = "The list of IPv4 CIDR blocks the VCN will use."
-  type        = list(string)
+  type        = string
 }
 
 variable "region" {

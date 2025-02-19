@@ -13,7 +13,7 @@
 # fingerprint          = "a1:c2:"
 # private_key_path = "/Users/username/Documents/privatekeypath/privatekey.pem"
 
-# vcn_cidrs = ["10.0.0.0/16"]
+# vcn_cidrs = "10.0.0.0/16"
 # subnet_cidr_block = "10.0.0.0/24"
 # on_prem_printer_ip = "192.168.1.1"
 # on_prem_printer_network = "192.168.1.0/24"
