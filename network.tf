@@ -5,13 +5,6 @@ resource "oci_core_vcn" "vcn" {
   compartment_id = var.compartment_ocid
   display_name   = var.label_prefix == "none" ? var.vcn_name : "${var.label_prefix}_${var.vcn_name}"
   dns_label      = var.vcn_dns_label
-
-  freeform_tags = var.freeform_tags
-  defined_tags  = var.defined_tags
-
-  lifecycle {
-    ignore_changes = [defined_tags, dns_label, freeform_tags]
-  }
 }
 
 resource "oci_core_subnet" "vcn_subnet" {
@@ -19,24 +12,15 @@ resource "oci_core_subnet" "vcn_subnet" {
   compartment_id = var.compartment_ocid
   vcn_id         = oci_core_vcn.vcn.id
   
-  defined_tags    = var.defined_tags
   display_name    = var.label_prefix == "none" ? var.subnet_name : "${var.label_prefix}_${var.subnet_name}"
   dns_label       = var.subnet_dns_label
-  freeform_tags   = var.freeform_tags
   prohibit_public_ip_on_vnic = false
   route_table_id             = oci_core_route_table.public_subnet_rt.id
-  
-  lifecycle {
-    ignore_changes = [defined_tags, dns_label, freeform_tags]
-  }
 }
 
 resource "oci_core_route_table" "public_subnet_rt" {
   compartment_id = var.compartment_ocid
   display_name   = var.route_table_display_name
-
-  freeform_tags = var.freeform_tags
-  defined_tags  = var.defined_tags
 
   route_rules {
     # * With this route table, Internet Gateway is always declared as the default gateway
@@ -52,10 +36,6 @@ resource "oci_core_route_table" "public_subnet_rt" {
   }
   
   vcn_id = oci_core_vcn.vcn.id
-
-  lifecycle {
-    ignore_changes = [defined_tags, freeform_tags]
-  }
 }
 
 resource "oci_core_network_security_group" "flb_network_security_group" {
@@ -113,16 +93,9 @@ resource "oci_core_network_security_group_security_rule" "flb_network_security_g
 
 resource "oci_core_internet_gateway" "igw" {
   compartment_id = var.compartment_ocid
-  display_name   = var.label_prefix == "none" ? var.internet_gateway_display_name : "${var.label_prefix}_${var.internet_gateway_display_name}"
-
-  freeform_tags = var.freeform_tags
-  defined_tags  = var.defined_tags
+  display_name   = var.label_prefix == "none" ? var.internet_gateway_display_name : "${var.label_prefix}_${var.internet_gateway_display_name}
 
   vcn_id = oci_core_vcn.vcn.id
-
-  lifecycle {
-    ignore_changes = [defined_tags, freeform_tags]
-  }
 }
 
 resource "oci_core_drg" "fusion_print_drg" {
