@@ -1,14 +1,3 @@
-variable "tenancy_ocid" {
-  description = "OCID of the tenancy where to create all resources"
-  type        = string
-}
-
-variable "user_ocid" {}
-
-variable "fingerprint" {}
-
-variable "private_key_path" {}
-
 variable "vcn_cidrs" {
   description = "The list of IPv4 CIDR blocks the VCN will use."
   type        = string
@@ -19,11 +8,6 @@ variable "region" {
     condition     = length(trim(var.region, "")) > 0
     error_message = "Validation failed for region: value is required."
   }
-}
-
-variable "compartment_ocid" {
-  description = "compartment id where to create all resources"
-  type        = string 
 }
 
 variable "vcn_name" {
