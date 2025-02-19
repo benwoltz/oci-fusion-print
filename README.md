@@ -2,7 +2,7 @@
 
 The OCI Terraform stack for Fusion Printing allows you to create and provision OCI infrastructure components required to print security from Fusion using OCI.  
 
-It creates the following resources outlined in this [blog] (https://www.ateam-oracle.com/post/using-oci-for-secure-on-prem-printing-from-oracle-fusion-bi-publisher): and [video] (https://www.youtube.com/watch?v=6xJo-njF1r0)
+It creates the following resources outlined in this [blog] and [video] 
 
 * VCN with a CIDR block, public subnet, and route table
 * Internet gateway
@@ -12,7 +12,7 @@ It creates the following resources outlined in this [blog] (https://www.ateam-or
 
 ## Prerequisites and postrequisites
 
-There are some tasks outside of OCI and this Terraform stack that you will need in order for this solution to work.  Those tasks are outlined below, lease see the [blog] (https://www.ateam-oracle.com/post/using-oci-for-secure-on-prem-printing-from-oracle-fusion-bi-publisher) and [video] (https://www.youtube.com/watch?v=6xJo-njF1r0) for more information
+There are some tasks outside of OCI and this Terraform stack that you will need in order for this solution to work.  Those tasks are outlined below, please see the [blog] and [video] 
 
 * FastConnect or IPSec VPN Tunnel from OCI to on-premise
 * Printer or print server on-premise
@@ -90,6 +90,7 @@ Licensed under the [Universal Permissive License 1.0][license] as shown at
 [docs]: https://github.com/oracle-terraform-modules/terraform-oci-vcn/tree/main/docs
 
 [blog]: https://www.ateam-oracle.com/post/using-oci-for-secure-on-prem-printing-from-oracle-fusion-bi-publisher
+[video]: https://www.youtube.com/watch?v=6xJo-njF1r0
 
 [oci]: https://cloud.oracle.com/cloud-infrastructure
 [oci_documentation]: https://docs.cloud.oracle.com/iaas/Content/home.htm
