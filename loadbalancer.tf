@@ -6,7 +6,7 @@ resource "oci_load_balancer_load_balancer" "fusion_print_load_balancer" {
     subnet_ids = [oci_core_subnet.vcn_subnet.id]
 
     #Optional
-    ip_mode = "IPv4"
+    ip_mode = "IPV4"
     is_private = "false"
     network_security_group_ids = [oci_core_network_security_group.flb_network_security_group.id]
     shape_details {
