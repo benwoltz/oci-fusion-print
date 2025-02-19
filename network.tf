@@ -93,7 +93,7 @@ resource "oci_core_network_security_group_security_rule" "flb_network_security_g
 
 resource "oci_core_internet_gateway" "igw" {
   compartment_id = var.compartment_ocid
-  display_name   = var.label_prefix == "none" ? var.internet_gateway_display_name : "${var.label_prefix}_${var.internet_gateway_display_name}
+  display_name   = var.label_prefix == "none" ? var.internet_gateway_display_name : "${var.label_prefix}_${var.internet_gateway_display_name}"
 
   vcn_id = oci_core_vcn.vcn.id
 }
