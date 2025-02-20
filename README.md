@@ -34,7 +34,7 @@ Step 2 - Select the compartment and Terraform version and click "Next"
 ![Stack Step 2](images/Stack%202.png)
 
 Step 3 - Fill out all variables listed (All are required but some have default values provided) and click "Next"
-![Stacke Step 3](images/Stack%203.png)
+![Stack Step 3](images/Stack%203.png)
 
 Step 4 - Review the information and click "Create"
 
