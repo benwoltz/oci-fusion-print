@@ -20,7 +20,6 @@ variableGroups:
       - "label_prefix"
  
   - title: "Generic Networking"
-    required: true
     variables:
     required: true
       - "vcn_name"
@@ -36,7 +35,6 @@ variableGroups:
       - "drg_attachment_display_name"
     
   - title: "Load Balancer"
-    required: true
     variables:
     required: true
       - "load_balancer_display_name"
