@@ -3,11 +3,12 @@ variable "compartment_ocid" {
   type        = string 
 }
 variable "vcn_cidrs" {
-  description = "The list of IPv4 CIDR blocks the VCN will use."
+  description = "The IPv4 CIDR block the VCN will use."
   type        = string
 }
 
 variable "region" {
+  description = "The OCI region where you want these resources deployed.  It is recommended you choose the same region as your Fusion application is hosted in."
   validation {
     condition     = length(trim(var.region, "")) > 0
     error_message = "Validation failed for region: value is required."
@@ -97,7 +98,7 @@ variable "drg_attachment_display_name" {
 }
 
 variable "on_prem_printer_ip" {
-  description = "IP address of on-prem printer or print server"
+  description = "IP address of on-prem printer or print server e.g. 10.0.0.10"
   type        = string
 }
 
