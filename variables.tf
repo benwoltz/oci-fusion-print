@@ -11,7 +11,7 @@ variable "vcn_cidrs" {
 
 variable "region" {
   description = "The OCI region where you want these resources deployed.  It is recommended you choose the same region as your Fusion application is hosted in."
-  required: true
+  
   validation {
     condition     = length(trim(var.region, "")) > 0
     error_message = "Validation failed for region: value is required."
