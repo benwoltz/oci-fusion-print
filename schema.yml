@@ -14,33 +14,89 @@ logoUrl: "https://www.ateam-oracle.com/content/published/api/v1.1/assets/CONT25C
 variableGroups:
   - title: "Environment"
     variables:
-    required: true
-      - "region"
-      - "compartment_ocid"
-      - "label_prefix"
+      - ${region}
+      - ${compartment_ocid}
+      - ${label_prefix}
  
   - title: "Generic Networking"
     variables:
-    required: true
-      - "vcn_name"
-      - "vcn_cidrs"
-      - "vcn_dns_label"
-      - "subnet_name"
-      - "subnet_cidr_block"
-      - "subnet_dns_label"
-      - "route_table_display_name"
-      - "internet_gateway_display_name"
-      - "fusion_source_cidr"
-      - "drg_display_name"
-      - "drg_attachment_display_name"
+      - ${vcn_name}
+      - ${vcn_cidrs}
+      - ${vcn_dns_label}
+      - ${subnet_name}
+      - ${subnet_cidr_block}
+      - ${subnet_dns_label}
+      - ${route_table_display_name}
+      - ${internet_gateway_display_name}
+      - ${fusion_source_cidr}
+      - ${drg_display_name}
+      - ${drg_attachment_display_name}
     
   - title: "Load Balancer"
     variables:
+      - ${load_balancer_display_name}
+      - ${load_balancer_shape_details_maximum_bandwidth_in_mbps}
+      - ${load_balancer_shape_details_minimum_bandwidth_in_mbps}
+      - ${on_prem_printer_network}
+      - ${on_prem_printer_ip}
+
+variables:
+  region:
     required: true
-      - "load_balancer_display_name"
-      - "load_balancer_shape_details_maximum_bandwidth_in_mbps"
-      - "load_balancer_shape_details_minimum_bandwidth_in_mbps"
-      - "on_prem_printer_network"
-      - "on_prem_printer_ip"
+  
+  compartment_ocid:
+    required: true
+
+  label_prefix:
+    required: true
+
+  vcn_name:
+    required: true
+
+  vcn_cidrs:
+    required: true
+
+  vcn_dns_label:
+    required: true
+
+  subnet_name:
+    required: true
+
+  subnet_cidr_block:
+    required: true  
+
+  subnet_dns_label:
+    required: true
+
+  route_table_display_name:
+    required: true
+
+  internet_gateway_display_name:
+    required: true
+
+  fusion_source_cidr:
+    required: true
+
+  drg_display_name:
+    required: true
+
+  drg_attachment_display_name:
+    required: true
+
+  load_balancer_display_name:
+    required: true
+
+  load_balancer_shape_details_maximum_bandwidth_in_mbps:
+    required: true
+  
+  load_balancer_shape_details_minimum_bandwidth_in_mbps:
+    required: true
+
+  on_prem_printer_network:
+    required: true
+
+  on_prem_printer_ip:
+    required: true
+
     
   
