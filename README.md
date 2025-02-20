@@ -39,16 +39,6 @@ Step 3 - Fill out all variables listed (All are required but some have default v
 Step 4 - Review the information and click "Create"
 
 
-
-
-
-
-#### Instructions
-
-* [Quickstart][quickstart]
-* [Reusing as a Terraform module][reuse]
-* [Terraform Options][terraform_options]
-
 ## Related Documentation, Blog
 
 * [Oracle Cloud Infrastructure Documentation][oci_documentation]
