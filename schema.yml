@@ -13,8 +13,8 @@ logoUrl: "https://www.ateam-oracle.com/content/published/api/v1.1/assets/CONT25C
 
 variableGroups:
   - title: "Environment"
-    required: true
     variables:
+    required: true
       - "region"
       - "compartment_ocid"
       - "label_prefix"
@@ -22,6 +22,7 @@ variableGroups:
   - title: "Generic Networking"
     required: true
     variables:
+    required: true
       - "vcn_name"
       - "vcn_cidrs"
       - "vcn_dns_label"
@@ -37,6 +38,7 @@ variableGroups:
   - title: "Load Balancer"
     required: true
     variables:
+    required: true
       - "load_balancer_display_name"
       - "load_balancer_shape_details_maximum_bandwidth_in_mbps"
       - "load_balancer_shape_details_minimum_bandwidth_in_mbps"
