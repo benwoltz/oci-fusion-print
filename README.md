@@ -21,29 +21,25 @@ There are some tasks outside of OCI and this Terraform stack that you will need 
 
 ## Resource Manager Deployment
 
-This Quick Start uses [OCI Resource Manager](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) to make deployment easy, sign up for an [OCI account](https://cloud.oracle.com/en_US/tryit) if you don't have one, and just click the button below:
+This stack uses [OCI Resource Manager](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) to make deployment easy, sign up for an [OCI account](https://cloud.oracle.com/en_US/tryit) if you don't have one, and just click the button below:
 
 [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/benwoltz/oci-fusion-print/archive/master.zip)
 
-After logging into the console you'll be taken through the same steps described
-in the [Deploy](#deploy) section below.
+After logging into the console you'll be taken through the same steps described below:
+
+Step 1 - Check the "I have reviewed and accept the Oracle Terms of Use" checkbox and optionally provide a name for this stack. 
+![Stack Step 1](images/Stack%201.png)
+
+Step 2 - Select the compartment and Terraform version and click "Next"
+![Stack Step 2](images/Stack%202.png)
+
+Step 3 - Fill out all variables listed (All are required but some have default values provided) and click "Next"
+![Stacke Step 3](images/Stack%203.png)
+
+Step 4 - Review the information and click "Create"
 
 
-Note, if you use this template to create another repo you'll need to change the link for the button to point at your repo.
 
-
-
-# Terraform for Secure On-Premise Printing from Fusion BI Publisher for OCI
-
-The [Terraform Secure On-Premise Printing from Fusion BI Publisher][repo] for [Oracle Cloud Infrastructure][OCI] provides a reusable [Terraform][terraform] module that provisions OCI infrastructure required to allow Fusion printing to on-premise according to this [blog].
-
-It creates the following resources:
-
-* A VCN with a CIDR block and a public subnet
-* An internet gateway and a route table
-* A dynamic routing gateway
-* A public load balancer with a single backend set and a single backend
-* A network security group with appropriate rules for Fusion printing
 
 
 
@@ -57,31 +53,9 @@ It creates the following resources:
 
 * [Oracle Cloud Infrastructure Documentation][oci_documentation]
 * [Terraform OCI Provider Documentation][terraform_oci]
-* [Erik Berg on Networks, Subnets and CIDR][subnets]
-* [Lisa Hagemann on Terraform cidrsubnet Deconstructed][terraform_cidr_subnet]
+* [Secure On-Premise Printing From Oracle Fusion BI Publisher using OCI Blog][blog]
+* [Secure On-Premise Printing From Oracle Fusion BI Publisher using OCI Video][video]
 
-## Projects using this module
-
-## Changelog
-
-View the [CHANGELOG][changelog].
-
-## Acknowledgement
-
-Code derived and adapted from [Terraform OCI Examples][terraform_oci_examples] and Hashicorp's [Terraform 0.12 examples][terraform_oci_examples]
-
-## Contributors
-
-[Folks who contributed with explanations, code, feedback, ideas, testing etc.][contributors]
-
-Learn how to [contribute][contributing].
-
-## License
-
-Copyright (c) 2019, 2021 Oracle and/or its associates.
-
-Licensed under the [Universal Permissive License 1.0][license] as shown at
-[https://oss.oracle.com/licenses/upl][canonical_license].
 
 <!-- Links reference section -->
 [changelog]: https://github.com/oracle-terraform-modules/terraform-oci-vcn/blob/main/CHANGELOG.adoc
